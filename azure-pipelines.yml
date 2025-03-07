@@ -4,6 +4,7 @@
 
 trigger:
   - main
+  - demo
 
 pool:
   vmImage: ubuntu-latest
@@ -31,6 +32,5 @@ stages:
           - task: PythonScript@0
             inputs:
               scriptSource: "filePath"
-              scriptPath: "main.py"
-              workingDirectory: "$(System.DefaultWorkingDirectory)/app"
+              scriptPath: "app/main.py"
               pythonInterpreter: "python3"
